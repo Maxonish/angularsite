@@ -1,0 +1,62 @@
+
+<div class="row">
+  <div class="col-lg-4 col-md-6 col-sm-6 margin2 hidden-xs" ng-repeat="cat in cats" >
+		<div class="grid">
+			<figure class="effect-winston">
+				<img ng-src="{{cat.src}}" alt="Cat"/>
+					<figcaption class="underline">
+						<h2>Beautiful <span>Cats</span></h2>
+						<p>
+							<a href="#" class="underline_a">
+								<i class="fa fa-fw fa-star-o">
+									<span class="glyphicon glyphicon-star-empty">
+								
+									</span>
+								</i>
+							</a>
+							<a href="#" class="underline_a">
+								<i class="fa fa-fw fa-comments-o">
+									<span class="glyphicon glyphicon-cloud">
+								
+									</span>
+								</i>
+							</a>
+							<a href="#" class="underline_a">
+								<i class="fa fa-fw fa-envelope-o">
+									<span class="glyphicon glyphicon-envelope">
+								
+									</span>
+								</i>
+							</a>
+						</p>
+					</figcaption>			
+			</figure>
+		</div>    
+	</div>
+	<div class="col-xs-12 hidden-sm hidden-md hidden-lg margin2" ng-repeat="cat in cats">
+		<img ng-src="{{cat.src}}" class="img-responsive" alt="Cat"/>
+	</div>
+</div>
+
+
+
+
+
+<div class="background_loader" ng-show="loader"></div>
+<div class="loader" ng-show="loader">
+	<div class="cssload-container">
+		<div class="cssload-item cssload-ventilator"></div>
+	</div>
+</div>
+
+
+<div class="row hidden-xs">
+     <div class="col-md-4 col-md-offset-5 col-sm-4 col-lg-3  col-sm-offset-4 col-lg-offset-5 pag" pagination="{{page}}"><div class="margin3 "  ng-repeat="num in nums" ng-class="{selected:$first}" ng-click="Query($event)">{{num}}</div></div>
+</div>
+
+<div class="row hidden-lg hidden-md hidden-sm">
+    <div class="col-xs-10 col-xs-offset-1 pag padding_bottom">
+		<button type="button" class="btn btn-primary buttonpag" ng-show="button" ng-click="Querymobile();">Загрузить еще</button>
+	</div>
+	
+</div>

@@ -1,0 +1,38 @@
+<div class="row "  ng-show="message">
+	<div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1 contacts">
+		contact us
+	</div>
+</div>
+<div class="row hidden-xs" ng-show="message">
+  <div class="col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
+    <form name="myForm" formerror="{{error}}">
+      <div class="form-group form_name" novalidate >
+        <input type="text" name="name" class="form-control input_name" ng-model="data.name"  ng-required="true" placeholder="Name">
+      </div>
+      <div class="form-group">
+				<textarea class="form-control" name="message" rows="6" ng-required="true"  placeholder="Message" ng-model="data.message"></textarea>
+      </div>
+      <button type="button" class="btn btn-warning" ng-click="Inspection(myForm.message.$valid,myForm.name.$valid,data);">Submit</button>
+    </form>
+  </div>
+</div>
+
+<div class="row hidden-lg hidden-md hidden-sm" ng-show="message">
+  <div class="col-xs-8 col-xs-offset-2">
+    <form name="myForm" formerror="{{error}}">
+      <div class="form-group form_name"  novalidate >
+        <input type="text" name="name" class="form-control form_name_xs" ng-model="data.name"  ng-required="true"  placeholder="Name">
+      </div>
+      <div class="form-group">
+				<textarea class="form-control" name="message" rows="6" ng-required="true"  placeholder="Message" ng-model="data.message"></textarea>
+      </div>
+      <button type="button" class="btn btn-warning" ng-click="Inspection(myForm.message.$valid,myForm.name.$valid,data);">Submit</button>
+    </form>
+  </div>
+</div>
+
+<div class="row message_row" ng-hide="message" >
+  <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1 message_send">
+		<span>Message sent successfully</span>
+  </div>
+</div>
